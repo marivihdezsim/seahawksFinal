@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12s Nation | Seattle Seahawks</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- TOP NAVBAR -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="seahawksPics/seahawksLogo.png" class="brand-logo" alt="Seahawks Logo">
+        <div class="brand-text">
+          <span class="brand-name">12s Nation</span>
+          <span class="brand-tagline">Seattle Seahawks Fan Hub</span>
+        </div>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#" class="nav-link is-active">Home</a>
+        <a href="#game-card" class="nav-link">Game</a>
+        <a href="#featured" class="nav-link">News</a>
+        <a href="#roundup" class="nav-link">Gameday</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <!-- QUICK ACTION ICON ROW -->
+    <section class="quick-actions">
+      <button class="action-btn">
+        <div class="action-icon">👤</div>
+        <span class="action-label">Profile</span>
+      </button>
+      <button class="action-btn">
+        <div class="action-icon">📰</div>
+        <span class="action-label">News</span>
+      </button>
+      <!--
+      <button class="action-btn">
+        <div class="action-icon">▶</div>
+        <span class="action-label">Videos</span>
+      </button> -->
+      <button class="action-btn">
+        <div class="action-icon">📸</div>
+        <span class="action-label">Photos</span>
+      </button>
+      <!-- 
+      <button class="action-btn">
+        <div class="action-icon">🎙</div>
+        <span class="action-label">Podcasts</span>
+      </button> -->
+
+      <button class="radio-pill">RADIO</button>
+    </section>
+
+    <!-- GAME CARD -->
+    <section id="game-card" class="game-card">
+      <p class="game-week">Week 12 · Nov 23</p>
+      <h1 class="game-matchup">Seahawks @ Titans</h1>
+      <p class="game-time">1:00 PM</p>
+      <p class="game-location">Nissan Stadium</p>
+
+      <div class="record-row">
+        <div class="record">
+          <span class="record-label">SEA</span>
+          <span class="record-value">7–3</span>
+        </div>
+        <div class="record">
+          <span class="record-label">TEN</span>
+          <span class="record-value">1–9</span>
+        </div>
+      </div>
+
+      <div class="game-cta">
+        <button class="btn-outline">🎟 Buy Tickets</button>
+        <button class="btn-ghost">The Pro Shop</button>
+      </div>
+    </section>
+
+    <!-- FEATURED CARDS -->
+    <section id="featured" class="featured">
+      <h2 class="section-title">Featured for the 12s</h2>
+
+      <div class="card-row">
+        <!-- Card 1 -->
+        <div class="feature-card">
+          <div class="card-image">
+            <img src="seahawksPics/picture1.jpeg" alt="">
+            <span class="chip-new">NEW</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Top Stories</h3>
+            <p class="card-subtitle">Daily news and updates from the team</p>
+            <button class="btn-mini">Read More</button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="feature-card">
+          <div class="card-image">
+            <img src="seahawksPics/picture2.png" alt="">
+            <span class="chip-new">NEW</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">2025 Schedule</h3>
+            <p class="card-subtitle">All home & away matchups</p>
+            <button class="btn-mini">View Schedule</button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="feature-card">
+          <div class="card-image">
+            <img src="seahawksPics/myCauseMyCleats.jpeg" alt="">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">My Cause My Cleats</h3>
+            <p class="card-subtitle">Stories behind custom cleats</p>
+            <button class="btn-mini">Explore</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROUNDUP BANNER -->
+    <section id="roundup" class="roundup">
+      <div class="roundup-image">
+        <img src="seahawksPics/picture4.jpeg" alt="">
+        <div class="roundup-overlay">
+          <p class="roundup-kicker">Seahawks Round-Up</p>
+          <p class="roundup-text">Practice clips, interviews, and inside access.</p>
+          <button class="btn-primary">Watch Now</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JS LINK -->
+  <script src="script.js"></script>
+  <script>
+
+    // 1. MOBILE NAV TOGGLE
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.getElementById("menuToggle");
+      const mainNav = document.getElementById("mainNav");
+
+      if (menuToggle && mainNav) {
+        menuToggle.addEventListener("click", () => {
+          mainNav.classList.toggle("is-open");
+        });
+      }
+
+      // 2. RADIO BUTTON TOGGLE
+      const radioBtn = document.querySelector(".radio-pill");
+      let isLive = false;
+
+      if (radioBtn) {
+        radioBtn.addEventListener("click", () => {
+          isLive = !isLive;
+
+          if (isLive) {
+            radioBtn.textContent = "LIVE";
+            radioBtn.style.backgroundColor = "#002346";
+            radioBtn.style.color = "#ffffff";
+          } else {
+            radioBtn.textContent = "RADIO";
+            radioBtn.style.backgroundColor = "#69BE28";
+            radioBtn.style.color = "#002346";
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+
+</body>
+</html>
