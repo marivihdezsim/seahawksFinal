@@ -1,6 +1,5 @@
-// JAVASCRIPTS
+// 1. MOBILE NAV TOGGLE
 document.addEventListener("DOMContentLoaded", function () {
-  // 1. MOBILE NAV TOGGLE
   const menuToggle = document.getElementById("menuToggle");
   const mainNav = document.getElementById("mainNav");
 
@@ -20,15 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (isLive) {
         radioBtn.textContent = "LIVE";
-        radioBtn.style.backgroundColor = "#002346";
+        radioBtn.style.backgroundColor = "#002346"; // navy
         radioBtn.style.color = "#ffffff";
       } else {
         radioBtn.textContent = "RADIO";
-        radioBtn.style.backgroundColor = "#69BE28";
+        radioBtn.style.backgroundColor = "#69BE28"; // green
         radioBtn.style.color = "#002346";
       }
     });
   }
 });
-
-
