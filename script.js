@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (isLive) {
         radioBtn.textContent = "LIVE";
-        radioBtn.style.backgroundColor = "#002346"; // navy
+        radioBtn.style.backgroundColor = "#002346";
         radioBtn.style.color = "#ffffff";
       } else {
         radioBtn.textContent = "RADIO";
-        radioBtn.style.backgroundColor = "#69BE28"; // green
+        radioBtn.style.backgroundColor = "#69BE28";
         radioBtn.style.color = "#002346";
       }
     });
